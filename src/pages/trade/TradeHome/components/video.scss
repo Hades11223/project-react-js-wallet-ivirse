@@ -1,0 +1,28 @@
+.home-trade-modal {
+  .ant-modal-content {
+    height: 600px;
+    background-color: transparent;
+    .ant-modal-body {
+      background-color: transparent;
+    }
+  }
+}
+
+// Responsive
+
+@media (max-width: 992px) {
+  .ant-modal.home-trade-modal {
+    width: auto !important;
+    iframe {
+      height: 400px;
+    }
+    .ant-modal-content {
+      height: 400px !important;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      .ant-modal-body {
+      }
+    }
+  }
+}

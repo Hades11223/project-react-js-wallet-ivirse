@@ -1,0 +1,152 @@
+.ant-drawer .ant-drawer-content {
+  background-color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+.ant-drawer-close {
+  display: none;
+}
+
+.ant-drawer-content {
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
+.drawer-header-title {
+  &-balance {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  &-button1 {
+    border: 1px solid #9b5fcc;
+    border-radius: 30px;
+  }
+}
+
+.drawer-header-body {
+  &-item {
+    font-weight: 400;
+    font-size: 17px;
+    color: #2b2b2b;
+ 
+    
+  }
+  &-item:focus {
+    font-weight: 700;
+    color: #9b5fcc;
+  }
+  &-item:hover {
+    color: #2b2b2b;
+    font-weight: 550;
+  }
+}
+
+#wallet-collapse {
+  .ant-collapse-item {
+    background-color: white;
+    .ant-collapse-header {
+      padding: 0px;
+    }
+  }
+  .ant-collapse-content-box {
+    ul {
+      padding: 0px;
+      .ant-btn {
+        border: none;
+        font-size: 15px;
+        box-shadow: none;
+      }
+      li {
+        padding: 0px;
+      }
+    }
+  }
+  .wallet-action_btn {
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+    span {
+      margin-left: 8px;
+    }
+  }
+}
+
+.footer-drawer {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  &-icon {
+    a{
+      svg{
+        width: 24px;
+        height: 24px;
+      }
+    }
+    a:last-child {
+      position: relative;
+      top: -3px;
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    svg {
+      margin-right: 15px;
+      path {
+        fill: #6e5ac3;
+      }
+    }
+  }
+}
+
+.drawer-user-info__container {
+  .content-left {
+    flex: 1;
+  }
+}
+
+.navigate-profile-btn {
+  border: none;
+  outline: none;
+  .anticon.anticon-right {
+    svg {
+      fill: #9b5fcc;
+    }
+  }
+}
+
+.ant-drawer-body{
+  max-height: 408px;
+  overflow-y: scroll;
+}
+
+.ant-drawer-content-wrapper {
+  .ant-drawer-content {
+    overflow: hidden;
+    .ant-drawer-header {
+      border-bottom: 5px solid #f0f0f0;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    width: 280px !important;
+  }
+}
+
+.line {
+  width: calc(100% + 48px);
+  height: 5px;
+  margin: 24px 0px 24px -24px;
+  background-color: #f5f5f5;
+}
+
+// .active-nav-link {
+//   color: #9b5fcc;
+//   font-weight: 700;
+// }

@@ -1,0 +1,46 @@
+.ant-picker-panel-container {
+  border-radius: 10px;
+}
+
+.custom-date-picker-panel,
+.custom-time-picker-panel {
+  border-radius: 10px;
+}
+
+.custom-date-picker-panel {
+}
+.custom-time-picker-panel {
+}
+
+.swap-btn {
+  flex-direction: column;
+  .swap-btn-item svg path {
+    fill: #c6c6c6;
+    opacity: 0.3;
+  }
+  .swap-btn-item.active svg path {
+    fill: white;
+    opacity: 1;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    height: auto;
+    line-height: 10px;
+  }
+}
+.token-swap {
+  .token-swap-btn {
+    /* background-color: #f6f6f6;
+    border-radius: 20px; */
+    border: none;
+    box-shadow: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #2b2b2b;
+  }
+}

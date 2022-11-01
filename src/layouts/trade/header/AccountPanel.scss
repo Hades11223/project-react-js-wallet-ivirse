@@ -1,0 +1,101 @@
+.account-panel {
+  .ant-popover-inner {
+    min-width: 300px;
+    // background-color: black;
+    // opacity:0.4;
+    // background: rgba(0, 0, 0, 0.4);
+    background-color: white;
+    .ant-popover-title {
+      border-bottom: 1px solid #a5a2a2;
+    }
+    .ant-popover-title:hover {
+      background: linear-gradient(to right, #bc37ff, #3f1a6b);
+    }
+    .account-panel__header {
+      padding: 8px;
+      color: black;
+      display: flex;
+      cursor: pointer;
+      :hover {
+        color: #fff;
+      }
+      svg {
+        font-size: 20px;
+      }
+      .account-info {
+        display: flex;
+        .account-info__avatar {
+          margin-right: 12px;
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        .account-info__txt {
+          font-size: 16px;
+          p {
+            margin-bottom: 2px;
+          }
+          .account-info__asset {
+            color: #9e9e9e;
+          }
+          .account-info__name {
+            max-width: 250px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+
+    .ant-popover-inner-content {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .list-account-option {
+      list-style-type: none;
+      padding: 0px;
+      * {
+        transition: none;
+      }
+      .list-account-option__item {
+        color: black;
+        display: flex;
+        align-items: center;
+        padding-left: 16px;
+        .option-icon {
+          display: flex;
+          align-items: center;
+          svg {
+            font-size: 16px;
+            path {
+              fill: black;
+            }
+          }
+          svg.option-icon-2 {
+            path {
+              fill: none;
+            }
+          }
+        }
+
+        .option-title__onclick {
+          background-color: transparent;
+          border: none;
+          box-shadow: none;
+          font-size: 16px;
+          transition: none;
+        }
+      }
+      .link-option__wrapper:hover {
+        // .list-account-option__item:hover {
+        background: linear-gradient(to right, #bc37ff, #3f1a6b);
+        color: white !important;
+
+        .ant-btn {
+          color: white;
+        }
+      }
+    }
+  }
+}
