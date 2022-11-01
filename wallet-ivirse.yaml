@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-react-js-wallet-ivirse
+  namespace: project-react-js-wallet-ivirse
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: project-react-js-wallet-ivirse
+  template:
+    metadata:
+      labels:
+        app: project-react-js-wallet-ivirse
+    spec:
+      containers:
+      - image: mainamctk33/reactjs:1.0
+        imagePullPolicy: Always
+        name: project-react-js-wallet-ivirse
+        ports:
+        - containerPort: 80
+          name: 80tcp32000
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /usr/share/nginx/html
+          name: project-react-js-wallet-ivirse
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: project-react-js-wallet-ivirse
+        nfs:
+          path: /mnt/NFS_Share/project-react-js-wallet-ivirse/app
+          server: 10.0.0.18
+  
+------------------------
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: project-react-js-wallet-ivirse
+  namespace: project-react-js-wallet-ivirse
+spec:
+  selector:
+    app: project-react-js-wallet-ivirse
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 31996
