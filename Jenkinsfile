@@ -18,7 +18,7 @@ pipeline {
 
     stage('Build'){
       steps{
-        sh 'cd /var/lib/jenkins/workspace/project-react-js-wallet-ivirse'
+        sh '/var/lib/jenkins/jobs/project-react-js-wallet-ivirse/workspace'
         sh 'npm install'
         sh 'yarn install --ignore-engines'
         sh 'yarn build'
